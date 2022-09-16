@@ -1,7 +1,8 @@
+from crypt import methods
 from flask import Flask, request
 app = Flask(__name__)
 
-@app.route('/temperature-alert')
+@app.route('/temperature-alert', methods=["POST"])
 def hello_world():
     print(request.form["data"])
     return ''
