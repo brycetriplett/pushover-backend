@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/temperature-alert')
 def hello_world():
-    print(request.form)
+    print(request.form["data"])
     return ''
 
 if __name__ == '__main__':
