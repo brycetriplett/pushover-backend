@@ -6,9 +6,10 @@ app = Flask(__name__)
 def hello_world():
     # for x in request:
     #     print(x)
-    result = request.data
+    # result = request.data
+    test = request.get_json()
 
-    print(result['agent_host'])
+    print(test)
     return ''
 
 if __name__ == '__main__':
