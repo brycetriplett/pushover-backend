@@ -8,8 +8,7 @@ def hello_world():
     #     print(x)
     # result = request.data
     test = request.get_json()
-
-    print(test)
+    print(test['agent_host'])
     return ''
 
 if __name__ == '__main__':
