@@ -1,14 +1,11 @@
-from crypt import methods
 from flask import Flask, request
+
 app = Flask(__name__)
 
 @app.route('/temperature-alert', methods=["POST"])
-def hello_world():
-    # for x in request:
-    #     print(x)
-    # result = request.data
-    test = request.get_json()
-    print(test['agent_host'])
+def temperature_alert():
+    data = request.get_json()
+    print(data)
     return ''
 
 if __name__ == '__main__':
