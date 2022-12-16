@@ -9,12 +9,10 @@ from pushover import send_alert
 def temperature_alert():
     data = request.get_json()
     
-    result = send_alert(
+    return send_alert(
         **pushover_args,
         message=data['_message']
     )
-
-    return result.status_code
 
 
 if __name__ == '__main__':
