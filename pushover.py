@@ -8,6 +8,7 @@ def send_alert(api_key, group_key, message):
         data = {
             'token': api_key,
             'user': group_key,
-            'message': message
+            'message': message,
+            'test': 'test'
         }
     )
